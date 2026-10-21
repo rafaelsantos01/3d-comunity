@@ -1,0 +1,55 @@
+{
+  "nome": "Letreiro 1 linha",
+  "descricao": "Texto em uma linha sobre uma placa retangular de cantos arredondados. Ideal para nomes e marcas curtas.",
+  "thumbnail": "thumbnail.svg",
+  "ordem": 1,
+  "papeis": {
+    "parte": "parte",
+    "emPe": "previa_em_pe",
+    "corBase": "cor_base",
+    "corLetras": "cor_letras",
+    "espessuraBase": "base_espessura",
+    "slug": ["texto"]
+  },
+  "secoes": {
+    "Texto": { "rotulo": "Texto" },
+    "Modo das letras": { "oculta": true },
+    "Placa": { "rotulo": "Placa" },
+    "Letras": { "rotulo": "Letras" },
+    "Exportação": { "rotulo": "Cores" }
+  },
+  "parametros": {
+    "texto": { "rotulo": "Texto", "grupo": "basico", "fonte": "fonte", "ajuda": "O texto que aparece no letreiro." },
+    "fonte": { "rotulo": "Fonte", "widget": "fonte", "grupo": "basico" },
+    "tamanho": { "rotulo": "Tamanho da letra", "min": 5, "max": 80, "step": 0.5, "unidade": "mm", "grupo": "basico", "ajuda": "Altura aproximada das letras. Atenção ao tamanho da mesa da impressora." },
+    "espacamento": { "rotulo": "Espaçamento entre letras", "min": 0.5, "max": 2, "step": 0.05, "grupo": "avancado", "ajuda": "1 = normal." },
+    "letras_fixas": { "rotulo": "Letras fixas na base", "grupo": "avancado", "ajuda": "Ligado: letras já em cima da base. Desligado: peças com pino para encaixar. A exportação define isso pelo modo escolhido." },
+    "margem_horizontal": { "rotulo": "Margem lateral", "min": 0, "max": 40, "step": 0.5, "unidade": "mm", "grupo": "basico", "ajuda": "Espaço entre o texto e as laterais da placa." },
+    "margem_vertical": { "rotulo": "Margem vertical", "min": 0, "max": 40, "step": 0.5, "unidade": "mm", "grupo": "basico", "ajuda": "Espaço entre o texto e o topo/fundo da placa." },
+    "raio_canto": { "rotulo": "Raio dos cantos", "min": 0.5, "max": 20, "step": 0.5, "unidade": "mm", "grupo": "avancado" },
+    "base_espessura": { "rotulo": "Espessura da base", "min": 2, "max": 30, "step": 0.5, "unidade": "mm", "grupo": "basico", "ajuda": "Também é a profundidade do pé na mesa." },
+    "altura_letra": { "rotulo": "Altura das letras", "min": 0.6, "max": 20, "step": 0.2, "unidade": "mm", "grupo": "basico", "ajuda": "Quanto as letras sobem acima da base." },
+    "profundidade_encaixe": { "rotulo": "Profundidade do encaixe", "min": 0.5, "max": 10, "step": 0.1, "unidade": "mm", "grupo": "avancado", "ajuda": "Usado no modo Encaixe e colagem." },
+    "folga": { "rotulo": "Folga do encaixe", "min": 0, "max": 1, "step": 0.05, "unidade": "mm", "grupo": "avancado" },
+    "cor_base": { "rotulo": "Cor da base", "grupo": "basico" },
+    "cor_letras": { "rotulo": "Cor das letras", "grupo": "basico" }
+  },
+  "previa": {
+    "base": { "parte": "base", "overrides": { "letras_fixas": true } },
+    "letras": { "parte": "letras_fixas", "overrides": { "letras_fixas": true } }
+  },
+  "exportacao": {
+    "multicor": {
+      "overrides": { "letras_fixas": true },
+      "partes": [{ "parte": "base", "cor": "base" }, { "parte": "letras_fixas", "cor": "letras" }]
+    },
+    "unico": {
+      "overrides": { "letras_fixas": true },
+      "partes": [{ "parte": "base_unica", "cor": "base" }]
+    },
+    "encaixe": {
+      "overrides": { "letras_fixas": false },
+      "partes": [{ "parte": "base", "cor": "base" }, { "parte": "letras_soltas", "cor": "letras" }]
+    }
+  }
+}

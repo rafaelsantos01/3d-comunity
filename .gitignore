@@ -3,3 +3,17 @@ node_modules/
 .env.*
 .DS_Store
 Thumbs.db
+
+# Next.js / testes
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+playwright-report/
+test-results/
+coverage/
+
+# gerados no build (npm run templates:build / postinstall)
+src/generated/
+public/templates/
+public/openscad/

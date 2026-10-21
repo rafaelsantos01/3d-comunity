@@ -1,0 +1,78 @@
+{
+  "nome": "Letreiro 2 linhas",
+  "descricao": "Duas linhas de texto com três estilos de base: contorno, retângulo ou degrau. Ótimo para logo + nome.",
+  "thumbnail": "thumbnail.svg",
+  "ordem": 2,
+  "papeis": {
+    "parte": "parte",
+    "emPe": "previa_em_pe",
+    "corBase": "cor_base",
+    "corLetras": "cor_letras",
+    "espessuraBase": "base_espessura",
+    "slug": ["linha1", "linha2"]
+  },
+  "secoes": {
+    "Modo das letras": { "oculta": true },
+    "Estilo da base": { "rotulo": "Estilo da base" },
+    "Retângulo / linha 2 do degrau": { "rotulo": "Margens (retângulo e linha 2 do degrau)" },
+    "Degrau: bloco do JP": { "rotulo": "Degrau: bloco da linha 1" },
+    "Exportação": { "rotulo": "Cores" }
+  },
+  "parametros": {
+    "linha1": { "rotulo": "Linha 1", "grupo": "basico", "fonte": "fonte1" },
+    "linha2": { "rotulo": "Linha 2", "grupo": "basico", "fonte": "fonte2", "ajuda": "Deixe vazio para um letreiro de uma linha só." },
+    "fonte1": { "rotulo": "Fonte da linha 1", "widget": "fonte", "grupo": "basico" },
+    "fonte2": { "rotulo": "Fonte da linha 2", "widget": "fonte", "grupo": "basico" },
+    "tamanho1": { "rotulo": "Tamanho da linha 1", "min": 5, "max": 120, "step": 0.5, "unidade": "mm", "grupo": "basico" },
+    "tamanho2": { "rotulo": "Tamanho da linha 2", "min": 3, "max": 80, "step": 0.5, "unidade": "mm", "grupo": "basico" },
+    "espacamento1": { "rotulo": "Espaçamento da linha 1", "min": 0.5, "max": 2, "step": 0.05, "grupo": "avancado" },
+    "espacamento2": { "rotulo": "Espaçamento da linha 2", "min": 0.5, "max": 2, "step": 0.05, "grupo": "avancado" },
+    "espaco_linhas": { "rotulo": "Espaço entre as linhas", "min": 0, "max": 30, "step": 0.5, "unidade": "mm", "grupo": "basico" },
+    "linha1_fixa": { "rotulo": "Linha 1 fixa", "grupo": "avancado" },
+    "linha2_fixa": { "rotulo": "Linha 2 fixa", "grupo": "avancado" },
+    "estilo_base": {
+      "rotulo": "Estilo da base",
+      "widget": "cards",
+      "grupo": "basico",
+      "opcoes": {
+        "contorno": { "rotulo": "Contorno", "icone": "contorno" },
+        "retangulo": { "rotulo": "Retângulo", "icone": "retangulo" },
+        "degrau": { "rotulo": "Degrau", "icone": "degrau" }
+      }
+    },
+    "base_espessura": { "rotulo": "Espessura da base", "min": 2, "max": 30, "step": 0.5, "unidade": "mm", "grupo": "basico", "ajuda": "Também é a profundidade do pé na mesa." },
+    "raio_canto": { "rotulo": "Raio dos cantos", "min": 0.5, "max": 20, "step": 0.5, "unidade": "mm", "grupo": "avancado", "ajuda": "Cantos arredondados (retângulo e degrau)." },
+    "margem_horizontal": { "rotulo": "Margem lateral", "min": 0, "max": 40, "step": 0.5, "unidade": "mm", "grupo": "avancado" },
+    "margem_vertical": { "rotulo": "Margem vertical", "min": 0, "max": 40, "step": 0.5, "unidade": "mm", "grupo": "avancado" },
+    "margem_jp_horizontal": { "rotulo": "Margem lateral do bloco", "min": 0, "max": 40, "step": 0.5, "unidade": "mm", "grupo": "avancado", "ajuda": "Diminua/aumente para deixar o bloco mais quadrado." },
+    "margem_jp_vertical": { "rotulo": "Margem vertical do bloco", "min": 0, "max": 40, "step": 0.5, "unidade": "mm", "grupo": "avancado" },
+    "raio_juncao": { "rotulo": "Raio da junção", "min": 0.5, "max": 20, "step": 0.5, "unidade": "mm", "grupo": "avancado", "ajuda": "Arredonda o cantinho onde os dois blocos se encontram." },
+    "borda": { "rotulo": "Borda do contorno", "min": 1, "max": 30, "step": 0.5, "unidade": "mm", "grupo": "avancado" },
+    "fechamento": { "rotulo": "Fechamento", "min": 0, "max": 30, "step": 0.5, "unidade": "mm", "grupo": "avancado", "ajuda": "Preenche os vãos entre as letras no estilo contorno." },
+    "corte": { "rotulo": "Corte do fundo", "min": 0, "max": 20, "step": 0.5, "unidade": "mm", "grupo": "avancado" },
+    "altura_pe": { "rotulo": "Altura do pé", "min": 0, "max": 40, "step": 0.5, "unidade": "mm", "grupo": "avancado" },
+    "altura_letra": { "rotulo": "Altura das letras", "min": 0.6, "max": 20, "step": 0.2, "unidade": "mm", "grupo": "basico" },
+    "profundidade_encaixe": { "rotulo": "Profundidade do encaixe", "min": 0.5, "max": 10, "step": 0.1, "unidade": "mm", "grupo": "avancado" },
+    "folga": { "rotulo": "Folga do encaixe", "min": 0, "max": 1, "step": 0.05, "unidade": "mm", "grupo": "avancado" },
+    "cor_base": { "rotulo": "Cor da base", "grupo": "basico" },
+    "cor_letras": { "rotulo": "Cor das letras", "grupo": "basico" }
+  },
+  "previa": {
+    "base": { "parte": "base", "overrides": { "linha1_fixa": true, "linha2_fixa": true } },
+    "letras": { "parte": "letras_fixas", "overrides": { "linha1_fixa": true, "linha2_fixa": true } }
+  },
+  "exportacao": {
+    "multicor": {
+      "overrides": { "linha1_fixa": true, "linha2_fixa": true },
+      "partes": [{ "parte": "base", "cor": "base" }, { "parte": "letras_fixas", "cor": "letras" }]
+    },
+    "unico": {
+      "overrides": { "linha1_fixa": true, "linha2_fixa": true },
+      "partes": [{ "parte": "base_unica", "cor": "base" }]
+    },
+    "encaixe": {
+      "overrides": { "linha1_fixa": false, "linha2_fixa": false },
+      "partes": [{ "parte": "base", "cor": "base" }, { "parte": "letras_soltas", "cor": "letras" }]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "nome": "Modelo Fixture",
+  "descricao": "Template fictício dos testes.",
+  "thumbnail": "thumbnail.svg",
+  "papeis": { "parte": "parte", "corBase": "cor", "corLetras": "cor2", "espessuraBase": "espessura", "slug": ["rotulo"] },
+  "secoes": { "Cores": { "rotulo": "Cores e peças" } },
+  "parametros": {
+    "rotulo": { "rotulo": "Rótulo", "grupo": "basico" },
+    "forma": { "rotulo": "Forma", "widget": "cards", "grupo": "basico", "opcoes": { "quadrado": { "rotulo": "Quadrado" }, "redondo": { "rotulo": "Redondo" } } },
+    "altura": { "rotulo": "Altura", "min": 1, "max": 50, "step": 0.5, "unidade": "mm", "grupo": "basico" },
+    "fixas": { "rotulo": "Fixas", "grupo": "avancado" },
+    "cor": { "rotulo": "Cor principal", "grupo": "basico" },
+    "cor2": { "rotulo": "Cor secundária", "grupo": "basico" },
+    "espessura": { "rotulo": "Espessura", "min": 1, "max": 10, "unidade": "mm", "grupo": "basico" }
+  },
+  "previa": { "base": { "parte": "base" }, "letras": { "parte": "letras_fixas" } },
+  "exportacao": {
+    "multicor": { "overrides": { "fixas": true }, "partes": [{ "parte": "base", "cor": "base" }, { "parte": "letras_fixas", "cor": "letras" }] },
+    "unico": { "partes": [{ "parte": "base_unica", "cor": "base" }] },
+    "encaixe": { "overrides": { "fixas": false }, "partes": [{ "parte": "base", "cor": "base" }, { "parte": "letras_soltas", "cor": "letras" }] }
+  }
+}

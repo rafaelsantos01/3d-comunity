@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" role="img" aria-label="Letreiro de uma linha">
+  <rect width="400" height="250" fill="#e8eef7"/>
+  <ellipse cx="200" cy="190" rx="170" ry="14" fill="#000" opacity=".12"/>
+  <rect x="30" y="85" width="340" height="95" rx="16" fill="#2B4C7E"/>
+  <rect x="30" y="170" width="340" height="12" rx="4" fill="#1d3557"/>
+  <text x="200" y="146" font-family="Arial Black, sans-serif" font-weight="900" font-size="34" fill="#fff" text-anchor="middle">JP Personalizados</text>
+</svg>

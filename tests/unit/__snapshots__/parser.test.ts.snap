@@ -1,0 +1,372 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`parseCustomizer > schema do template real letreiro-1-linha (snapshot) 1`] = `
+[
+  {
+    "nome": "texto",
+    "padrao": "JP Personalizados",
+    "secao": "Texto",
+    "tipo": "string",
+  },
+  {
+    "nome": "fonte",
+    "padrao": "Archivo Black",
+    "secao": "Texto",
+    "tipo": "string",
+  },
+  {
+    "ajuda": "atenção ao tamanho da mesa da impressora (ver nota abaixo)",
+    "inteiro": true,
+    "nome": "tamanho",
+    "padrao": 16,
+    "secao": "Texto",
+    "tipo": "numero",
+  },
+  {
+    "ajuda": "espaçamento entre letras (1 = normal)",
+    "inteiro": true,
+    "nome": "espacamento",
+    "padrao": 1,
+    "secao": "Texto",
+    "tipo": "numero",
+  },
+  {
+    "ajuda": "true = já sai em cima da base | false = peças com pino pra encaixar",
+    "nome": "letras_fixas",
+    "padrao": true,
+    "secao": "Modo das letras",
+    "tipo": "booleano",
+  },
+  {
+    "ajuda": "espaço entre o texto e as laterais da placa",
+    "inteiro": true,
+    "nome": "margem_horizontal",
+    "padrao": 4,
+    "secao": "Placa",
+    "tipo": "numero",
+  },
+  {
+    "ajuda": "espaço entre o texto e o topo/fundo da placa",
+    "inteiro": true,
+    "nome": "margem_vertical",
+    "padrao": 4,
+    "secao": "Placa",
+    "tipo": "numero",
+  },
+  {
+    "ajuda": "arredondamento dos cantos da placa",
+    "inteiro": true,
+    "nome": "raio_canto",
+    "padrao": 4,
+    "secao": "Placa",
+    "tipo": "numero",
+  },
+  {
+    "ajuda": "também é a "profundidade" do pé na mesa",
+    "inteiro": true,
+    "nome": "base_espessura",
+    "padrao": 12,
+    "secao": "Placa",
+    "tipo": "numero",
+  },
+  {
+    "inteiro": true,
+    "nome": "altura_letra",
+    "padrao": 4,
+    "secao": "Letras",
+    "tipo": "numero",
+  },
+  {
+    "inteiro": false,
+    "nome": "profundidade_encaixe",
+    "padrao": 2.5,
+    "secao": "Letras",
+    "tipo": "numero",
+  },
+  {
+    "inteiro": false,
+    "nome": "folga",
+    "padrao": 0.3,
+    "secao": "Letras",
+    "tipo": "numero",
+  },
+  {
+    "nome": "parte",
+    "opcoes": [
+      {
+        "valor": "previa",
+      },
+      {
+        "valor": "base",
+      },
+      {
+        "valor": "letras_fixas",
+      },
+      {
+        "valor": "letras_soltas",
+      },
+      {
+        "valor": "base_unica",
+      },
+    ],
+    "padrao": "previa",
+    "secao": "Exportação",
+    "tipo": "string",
+  },
+  {
+    "nome": "previa_em_pe",
+    "padrao": true,
+    "secao": "Exportação",
+    "tipo": "booleano",
+  },
+  {
+    "nome": "cor_base",
+    "padrao": "#2B4C7E",
+    "secao": "Exportação",
+    "tipo": "string",
+  },
+  {
+    "nome": "cor_letras",
+    "padrao": "#FFFFFF",
+    "secao": "Exportação",
+    "tipo": "string",
+  },
+]
+`;
+
+exports[`parseCustomizer > schema do template real letreiro-2-linhas (snapshot) 1`] = `
+[
+  {
+    "nome": "linha1",
+    "padrao": "JP",
+    "secao": "Texto",
+    "tipo": "string",
+  },
+  {
+    "ajuda": "deixe vazio "" para letreiro de uma linha só",
+    "nome": "linha2",
+    "padrao": "PERSONALIZADOS",
+    "secao": "Texto",
+    "tipo": "string",
+  },
+  {
+    "nome": "fonte1",
+    "padrao": "Playfair Display:style=Bold",
+    "secao": "Texto",
+    "tipo": "string",
+  },
+  {
+    "nome": "fonte2",
+    "padrao": "Playfair Display:style=Bold",
+    "secao": "Texto",
+    "tipo": "string",
+  },
+  {
+    "inteiro": true,
+    "nome": "tamanho1",
+    "padrao": 55,
+    "secao": "Texto",
+    "tipo": "numero",
+  },
+  {
+    "inteiro": true,
+    "nome": "tamanho2",
+    "padrao": 11,
+    "secao": "Texto",
+    "tipo": "numero",
+  },
+  {
+    "inteiro": true,
+    "nome": "espacamento1",
+    "padrao": 1,
+    "secao": "Texto",
+    "tipo": "numero",
+  },
+  {
+    "inteiro": false,
+    "nome": "espacamento2",
+    "padrao": 1,
+    "secao": "Texto",
+    "tipo": "numero",
+  },
+  {
+    "inteiro": true,
+    "nome": "espaco_linhas",
+    "padrao": 4,
+    "secao": "Texto",
+    "tipo": "numero",
+  },
+  {
+    "nome": "linha1_fixa",
+    "padrao": true,
+    "secao": "Modo das letras",
+    "tipo": "booleano",
+  },
+  {
+    "nome": "linha2_fixa",
+    "padrao": true,
+    "secao": "Modo das letras",
+    "tipo": "booleano",
+  },
+  {
+    "nome": "estilo_base",
+    "opcoes": [
+      {
+        "valor": "contorno",
+      },
+      {
+        "valor": "retangulo",
+      },
+      {
+        "valor": "degrau",
+      },
+    ],
+    "padrao": "retangulo",
+    "secao": "Estilo da base",
+    "tipo": "string",
+  },
+  {
+    "ajuda": "também é a "profundidade" do pé na mesa",
+    "inteiro": true,
+    "nome": "base_espessura",
+    "padrao": 12,
+    "secao": "Estilo da base",
+    "tipo": "numero",
+  },
+  {
+    "ajuda": "cantos arredondados (retangulo e degrau)",
+    "inteiro": true,
+    "nome": "raio_canto",
+    "padrao": 4,
+    "secao": "Estilo da base",
+    "tipo": "numero",
+  },
+  {
+    "inteiro": true,
+    "nome": "margem_horizontal",
+    "padrao": 10,
+    "secao": "Retângulo / linha 2 do degrau",
+    "tipo": "numero",
+  },
+  {
+    "inteiro": true,
+    "nome": "margem_vertical",
+    "padrao": 6,
+    "secao": "Retângulo / linha 2 do degrau",
+    "tipo": "numero",
+  },
+  {
+    "ajuda": "diminua/aumente para deixar o bloco mais quadrado",
+    "inteiro": true,
+    "nome": "margem_jp_horizontal",
+    "padrao": 8,
+    "secao": "Degrau: bloco do JP",
+    "tipo": "numero",
+  },
+  {
+    "inteiro": true,
+    "nome": "margem_jp_vertical",
+    "padrao": 6,
+    "secao": "Degrau: bloco do JP",
+    "tipo": "numero",
+  },
+  {
+    "ajuda": "arredonda o "cantinho" onde os dois blocos se encontram",
+    "inteiro": true,
+    "nome": "raio_juncao",
+    "padrao": 4,
+    "secao": "Degrau: bloco do JP",
+    "tipo": "numero",
+  },
+  {
+    "inteiro": true,
+    "nome": "borda",
+    "padrao": 6,
+    "secao": "Contorno",
+    "tipo": "numero",
+  },
+  {
+    "inteiro": true,
+    "nome": "fechamento",
+    "padrao": 10,
+    "secao": "Contorno",
+    "tipo": "numero",
+  },
+  {
+    "inteiro": true,
+    "nome": "corte",
+    "padrao": 3,
+    "secao": "Contorno",
+    "tipo": "numero",
+  },
+  {
+    "inteiro": true,
+    "nome": "altura_pe",
+    "padrao": 8,
+    "secao": "Contorno",
+    "tipo": "numero",
+  },
+  {
+    "inteiro": true,
+    "nome": "altura_letra",
+    "padrao": 5,
+    "secao": "Letras",
+    "tipo": "numero",
+  },
+  {
+    "inteiro": false,
+    "nome": "profundidade_encaixe",
+    "padrao": 2.5,
+    "secao": "Letras",
+    "tipo": "numero",
+  },
+  {
+    "inteiro": false,
+    "nome": "folga",
+    "padrao": 0.3,
+    "secao": "Letras",
+    "tipo": "numero",
+  },
+  {
+    "nome": "parte",
+    "opcoes": [
+      {
+        "valor": "previa",
+      },
+      {
+        "valor": "base",
+      },
+      {
+        "valor": "letras_fixas",
+      },
+      {
+        "valor": "letras_soltas",
+      },
+      {
+        "valor": "base_unica",
+      },
+    ],
+    "padrao": "previa",
+    "secao": "Exportação",
+    "tipo": "string",
+  },
+  {
+    "nome": "previa_em_pe",
+    "padrao": true,
+    "secao": "Exportação",
+    "tipo": "booleano",
+  },
+  {
+    "nome": "cor_base",
+    "padrao": "#F5EFE6",
+    "secao": "Exportação",
+    "tipo": "string",
+  },
+  {
+    "nome": "cor_letras",
+    "padrao": "#6B3E26",
+    "secao": "Exportação",
+    "tipo": "string",
+  },
+]
+`;

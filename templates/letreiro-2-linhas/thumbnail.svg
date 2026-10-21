@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" role="img" aria-label="Letreiro de duas linhas">
+  <rect width="400" height="250" fill="#f3ece2"/>
+  <ellipse cx="200" cy="205" rx="160" ry="13" fill="#000" opacity=".12"/>
+  <rect x="50" y="40" width="300" height="160" rx="16" fill="#F5EFE6" stroke="#d9cbb8" stroke-width="3"/>
+  <text x="200" y="135" font-family="Georgia, serif" font-weight="700" font-size="90" fill="#6B3E26" text-anchor="middle">JP</text>
+  <text x="200" y="172" font-family="Georgia, serif" font-weight="700" font-size="22" letter-spacing="2" fill="#6B3E26" text-anchor="middle">PERSONALIZADOS</text>
+</svg>
