@@ -8,6 +8,27 @@ test("galeria sem violações de acessibilidade", async ({ page }) => {
   expect((await axe(page).analyze()).violations).toEqual([]);
 });
 
+test("/apoie sem violações nos temas claro e escuro", async ({ page }) => {
+  for (const colorScheme of ["light", "dark"] as const) {
+    await page.emulateMedia({ colorScheme, reducedMotion: "reduce" });
+    await page.goto("/apoie");
+    await expect(page.getByRole("heading", { level: 1, name: "Me pague um café ☕" })).toBeVisible();
+    expect((await axe(page).analyze()).violations).toEqual([]);
+  }
+});
+
+test("/apoie copia a chave Pix pelo teclado", async ({ page, context, browserName, isMobile }) => {
+  // só o Chromium aceita conceder a permissão da área de transferência
+  test.skip(isMobile || browserName !== "chromium", "cópia pelo teclado verificada no Chromium desktop");
+  await page.goto("/apoie");
+  const copiar = page.getByRole("button", { name: "Copiar chave Pix" });
+  test.skip((await copiar.count()) === 0, "Pix não configurado no build (ver README, Doações)");
+  await context.grantPermissions(["clipboard-read", "clipboard-write"]);
+  await copiar.focus();
+  await page.keyboard.press("Enter");
+  await expect(page.getByRole("button", { name: "Copiado!" })).toBeVisible();
+});
+
 test("editor e modal sem violações, operáveis por teclado", async ({ page, isMobile }) => {
   test.skip(isMobile, "navegação por teclado verificada no desktop");
   // sem animação de entrada: o axe mede as cores finais, não o meio do fade

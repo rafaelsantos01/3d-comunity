@@ -31,6 +31,32 @@ npm run dev          # http://localhost:3000 (o predev gera o catálogo de templ
 **Deploy (Vercel):** importe o repositório. O `vercel.json` usa `npm ci` + `npm run build`. Não há headers COOP/COEP
 porque o build do OpenSCAD é single-thread. Os headers de cache ficam no `next.config.ts`.
 
+## Doações (Pix)
+
+A página `/apoie` ("Me pague um café ☕", link "Apoie" no header) mostra um QR Code Pix estático **sem valor**
+(quem doa escolhe o valor no app do banco), a chave Pix e o código copia e cola. Não há integração com banco nem
+confirmação de pagamento, e nada do doador é coletado. A configuração fica em `src/config/doacao.ts`, lida das
+variáveis abaixo (modelo em `.env.example`):
+
+| Variável | Obrigatória | Regras |
+|---|---|---|
+| `NEXT_PUBLIC_PIX_CHAVE` | sim | e-mail, telefone (`+55…`), CPF/CNPJ ou chave aleatória; até 77 caracteres, sem espaços |
+| `NEXT_PUBLIC_PIX_NOME` | sim | nome do beneficiário; acentos e símbolos são removidos e o texto é cortado em 25 caracteres |
+| `NEXT_PUBLIC_PIX_CIDADE` | sim | mesma normalização, cortada em 15 caracteres |
+| `NEXT_PUBLIC_PIX_TXID` | não | até 25 letras/números; padrão `***` |
+
+- O payload (BR Code com CRC16) é montado em `src/lib/pix/br-code.ts` e o QR é gerado **no build** (lib `qrcode`).
+  Na Vercel, cadastre as variáveis no projeto e faça um **novo deploy** sempre que trocar algum valor.
+- Sem chave, nome ou cidade válidos (ou com txid inválido), o build continua funcionando e a página mostra
+  "As doações estão temporariamente indisponíveis".
+- Os e2e de `/apoie` que dependem do QR são pulados sem configuração. Para rodá-los, use um build de teste:
+
+```bash
+NEXT_PUBLIC_PIX_CHAVE=123e4567-e12b-12d1-a456-426655440000 NEXT_PUBLIC_PIX_NOME="Fulano de Tal" \
+  NEXT_PUBLIC_PIX_CIDADE=BRASILIA npm run build
+npm run test:e2e
+```
+
 ## Como adicionar um novo template
 
 1. Crie a pasta `templates/<id>/` (`id` com letras minúsculas, números e hífen).
