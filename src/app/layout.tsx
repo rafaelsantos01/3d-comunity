@@ -1,3 +1,4 @@
+import { Coffee } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ThemeProvider } from "next-themes";
@@ -22,7 +23,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <Link href="/" className="text-base font-semibold tracking-tight">
                 Letreiros<span className="text-marca"> 3D</span>
               </Link>
-              <TemaToggle />
+              <div className="flex items-center gap-1">
+                <nav aria-label="Principal">
+                  <Link href="/apoie" className="inline-flex h-9 items-center gap-2 rounded-lg px-3 text-sm font-medium transition hover:bg-fundo">
+                    <Coffee className="size-4" aria-hidden />
+                    Apoie
+                  </Link>
+                </nav>
+                <TemaToggle />
+              </div>
             </div>
           </header>
           <main id="conteudo">{children}</main>
